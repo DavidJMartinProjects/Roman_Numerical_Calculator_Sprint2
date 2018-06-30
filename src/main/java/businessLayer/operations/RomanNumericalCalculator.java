@@ -12,11 +12,11 @@
 package businessLayer.operations;
 
 import businessLayer.Converter;
-import businessLayer.api.Calculator;
+import businessLayer.api.CalculatorStrategy;
 import domainLayer.CalculationResult;
 import utils.Validator;
 
-public abstract class RomanNumericalCalculator implements Calculator {
+public abstract class RomanNumericalCalculator implements CalculatorStrategy {
 	
 	final Converter converter = new Converter();
 	final Validator validator = new Validator();

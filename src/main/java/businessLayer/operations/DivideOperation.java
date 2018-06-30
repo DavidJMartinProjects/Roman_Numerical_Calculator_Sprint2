@@ -9,14 +9,27 @@
  * program(s) have been supplied.
  *******************************************************************************
  *----------------------------------------------------------------------------*/
-package businessLayer.api;
+package businessLayer.operations;
 
-import org.springframework.stereotype.Component;
-
+import businessLayer.api.CalculatorStrategy;
 import domainLayer.CalculationResult;
 
-@Component
-public interface Calculator {
-	CalculationResult doCalculation(String romanNumeral1, String romanNumeral2);
+/**
+ * @author eaamrvd
+ *
+ */	
+
+public class DivideOperation extends RomanNumericalCalculator implements CalculatorStrategy  {
+
+	@Override
+	public boolean validateOperation(final int numeral1, final int numeral2) {		
+		return true;	
+	}
+
+	@Override	
+	public CalculationResult calculate(final int num1, final int num2) {		
+		return converter.toRomanNumeral(num1 / num2);		
+	}
+
+
 }
-	

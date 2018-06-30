@@ -11,10 +11,10 @@
  *----------------------------------------------------------------------------*/
 package businessLayer.operations;
 
-import businessLayer.api.Calculator;
+import businessLayer.api.CalculatorStrategy;
 import domainLayer.CalculationResult;
 
-public class OperationSubtract extends RomanNumericalCalculator implements Calculator  { 		
+public class SubtractOperation extends RomanNumericalCalculator implements CalculatorStrategy  { 		
 
 	@Override
 	public boolean validateOperation(final int numeral1, final int numeral2) {		

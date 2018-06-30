@@ -14,7 +14,7 @@ package businessLayer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import businessLayer.api.Calculator;
+import businessLayer.api.CalculatorStrategy;
 import domainLayer.CalculationResult;
 
 /**
@@ -22,20 +22,20 @@ import domainLayer.CalculationResult;
  *
  */
 @Component
-public class OperationContext {
+public class CalculatorContext {
 	
 	@Autowired
-	Calculator operation;	
+	CalculatorStrategy operation;	
 			
-	public OperationContext(final Calculator anOperation){
+	public CalculatorContext(final CalculatorStrategy anOperation){
 	    this.operation = anOperation;
 	}	
 	
-	public Calculator getOperation() {
+	public CalculatorStrategy getOperation() {
 		return operation;
 	}	
 
-	public void setOperation(final Calculator operation) {
+	public void setOperation(final CalculatorStrategy operation) {
 		this.operation = operation;
 	}
 
