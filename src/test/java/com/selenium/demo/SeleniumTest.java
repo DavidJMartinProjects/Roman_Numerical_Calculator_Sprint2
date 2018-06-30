@@ -61,6 +61,7 @@ public class SeleniumTest {
 		driver.findElement(By.id("numTwoTf")).clear();
 		driver.findElement(By.id("numTwoTf")).sendKeys("LX");
 		driver.findElement(By.id("calcBtn")).click();
+		Thread.sleep(1000);
 		try {
 			assertEquals("Result : XIV + LX = LXXIV", driver.findElement(By.id("result")).getText());
 		} catch (Error e) {
@@ -73,6 +74,7 @@ public class SeleniumTest {
 	public void testVerifyErrorMessage() throws Exception {
 		driver.get("http://localhost:8080/");
 		driver.findElement(By.id("calcBtn")).click();
+		Thread.sleep(1000);
 		try {
 			assertEquals("Please Input a Roman Numeral.", driver.findElement(By.id("validationMessage")).getText());
 		} catch (Error e) {
@@ -90,6 +92,7 @@ public class SeleniumTest {
 		driver.findElement(By.id("numTwoTf")).clear();
 		driver.findElement(By.id("numTwoTf")).sendKeys("23");
 		driver.findElement(By.id("calcBtn")).click();
+		Thread.sleep(1000);
 		try {
 			assertEquals("Invalid Roman Numerical Format.", driver.findElement(By.id("validationMessage")).getText());
 		} catch (Error e) {
@@ -99,6 +102,7 @@ public class SeleniumTest {
 
 	@After
 	public void tearDown() throws Exception {
+		driver.close();
 		driver.quit();
 		String verificationErrorString = verificationErrors.toString();
 		if (!"".equals(verificationErrorString)) {
