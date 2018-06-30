@@ -14,6 +14,7 @@ package businessLayer.operations;
 import org.springframework.stereotype.Component;
 
 import businessLayer.api.CalculatorStrategy;
+import businessLayer.api.RomanNumericalCalculator;
 import domainLayer.CalculationResult;
 
 @Component

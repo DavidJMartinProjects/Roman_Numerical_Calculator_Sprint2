@@ -12,6 +12,7 @@
 package businessLayer.operations;
 
 import businessLayer.api.CalculatorStrategy;
+import businessLayer.api.RomanNumericalCalculator;
 import domainLayer.CalculationResult;
 
 public class SubtractOperation extends RomanNumericalCalculator implements CalculatorStrategy  { 		

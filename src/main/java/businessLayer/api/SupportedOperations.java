@@ -9,7 +9,7 @@
  * program(s) have been supplied.
  *******************************************************************************
  *----------------------------------------------------------------------------*/
-package businessLayer.operations;
+package businessLayer.api;
 
 public enum SupportedOperations {
 

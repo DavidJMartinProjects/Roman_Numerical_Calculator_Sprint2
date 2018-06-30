@@ -9,17 +9,16 @@
  * program(s) have been supplied.
  *******************************************************************************
  *----------------------------------------------------------------------------*/
-package businessLayer.operations;
+package businessLayer.api;
 
-import businessLayer.api.CalculatorStrategy;
 import domainLayer.CalculationResult;
 import utils.Converter;
 import utils.Validator;
 
 public abstract class RomanNumericalCalculator implements CalculatorStrategy {
 	
-	final Converter converter = new Converter();
-	final Validator validator = new Validator();
+	protected final Converter converter = new Converter();
+	protected final Validator validator = new Validator();
 	
 	@Override
 	public CalculationResult doCalculation(final String romanNumeral1, final String romanNumeral2) {		

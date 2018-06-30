@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import businessLayer.CalculatorContext;
 import businessLayer.OperationFactory;
-import businessLayer.operations.SupportedOperations;
+import businessLayer.api.SupportedOperations;
 import domainLayer.CalculationResult;
 
 @RestController

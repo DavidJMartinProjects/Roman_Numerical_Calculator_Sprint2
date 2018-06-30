@@ -11,7 +11,7 @@ public class DriverFactory {
 			return new FirefoxDriver();
 		}
 		else{
-			System.setProperty("webdriver.chrome.driver","C:\\Software\\selenium\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\software\\chromeDriver\\chromedriver.exe");
 			return new ChromeDriver();
 		}
 	}
