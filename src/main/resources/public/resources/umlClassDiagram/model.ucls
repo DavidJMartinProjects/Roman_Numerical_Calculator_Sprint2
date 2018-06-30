@@ -86,8 +86,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="10" language="java" name="businessLayer.operations.AvailableOperations" project="com.calculator" 
-    file="/com.calculator/src/main/java/businessLayer/operations/AvailableOperations.java" binary="false" 
+  <enumeration id="10" language="java" name="businessLayer.operations.SupportedOperations" project="com.calculator" 
+    file="/com.calculator/src/main/java/businessLayer/operations/SupportedOperations.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1429" y="298"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

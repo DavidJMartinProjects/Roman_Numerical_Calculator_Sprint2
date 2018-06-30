@@ -23,7 +23,7 @@ public abstract class RomanNumericalCalculator implements CalculatorStrategy {
 	
 	@Override
 	public CalculationResult doCalculation(final String romanNumeral1, final String romanNumeral2) {		
-		if(validateRomanNumerals(romanNumeral1, romanNumeral2) && validateOperation(converter.toBaseTen(romanNumeral1), converter.toBaseTen(romanNumeral2))) {
+		if(validateRomanNumerals(romanNumeral1, romanNumeral2) && validateCalculation(converter.toBaseTen(romanNumeral1), converter.toBaseTen(romanNumeral2))) {
 			return calculate(converter.toBaseTen(romanNumeral1), converter.toBaseTen(romanNumeral2));			
 		}		
 		return null;		
@@ -33,7 +33,7 @@ public abstract class RomanNumericalCalculator implements CalculatorStrategy {
 		return (validator.validateRomanNumeral(numeral1) && validator.validateRomanNumeral(numeral2));
 	}
 	
-	public abstract boolean validateOperation(final int numeral1, final int numeral2);
+	public abstract boolean validateCalculation(final int numeral1, final int numeral2);
 	
 	public abstract CalculationResult calculate(int num1, int num2);
 }

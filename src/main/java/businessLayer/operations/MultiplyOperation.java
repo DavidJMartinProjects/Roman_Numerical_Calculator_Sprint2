@@ -17,7 +17,7 @@ import domainLayer.CalculationResult;
 public class MultiplyOperation extends RomanNumericalCalculator implements CalculatorStrategy  {
 
 	@Override
-	public boolean validateOperation(final int numeral1, final int numeral2) {		
+	public boolean validateCalculation(final int numeral1, final int numeral2) {		
 		return true;	
 	}
 

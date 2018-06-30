@@ -11,13 +11,13 @@
  *----------------------------------------------------------------------------*/
 package businessLayer.operations;
 
-public enum AvailableOperations {
+public enum SupportedOperations {
 
 	PLUS("+"), MINUS("-"), DIVIDE("/"), MULTIPLY("*");
 	
 	private String symbol;
 	
-	AvailableOperations(final String aSymbol) {
+	SupportedOperations(final String aSymbol) {
 		this.symbol = aSymbol;
 	}
 
@@ -31,8 +31,8 @@ public enum AvailableOperations {
 
 	public static String getAvailableOperations() {
 		String operations = "";
-		final AvailableOperations arr[] = AvailableOperations.values();
-		for(final AvailableOperations op : arr) {
+		final SupportedOperations arr[] = SupportedOperations.values();
+		for(final SupportedOperations op : arr) {
 			if(op != null) {
 				operations+= op.getSymbol();
 			}

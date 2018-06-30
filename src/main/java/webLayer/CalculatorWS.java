@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import businessLayer.CalculatorContext;
 import businessLayer.OperationFactory;
-import businessLayer.operations.AvailableOperations;
+import businessLayer.operations.SupportedOperations;
 import domainLayer.CalculationResult;
 
 @RestController
@@ -47,7 +47,7 @@ public class CalculatorWS {
 	
 	@RequestMapping(value = "/operations", method = RequestMethod.GET, produces = { "application/json" })
 	public ResponseEntity<Object> getOperations() {		
-		return new ResponseEntity<>(AvailableOperations.getAvailableOperations(), HttpStatus.OK);
+		return new ResponseEntity<>(SupportedOperations.getAvailableOperations(), HttpStatus.OK);
 	}	
 
 }
