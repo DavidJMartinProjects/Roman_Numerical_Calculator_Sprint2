@@ -25,21 +25,21 @@ import domainLayer.CalculationResult;
 public class CalculatorContext {
 	
 	@Autowired
-	CalculatorStrategy operation;	
+	CalculatorStrategy strategy;	
 			
 	public CalculatorContext(final CalculatorStrategy anOperation){
-	    this.operation = anOperation;
+	    this.strategy = anOperation;
 	}	
 	
 	public CalculatorStrategy getOperation() {
-		return operation;
+		return strategy;
 	}	
 
 	public void setOperation(final CalculatorStrategy operation) {
-		this.operation = operation;
+		this.strategy = operation;
 	}
 
 	public CalculationResult executeOperation(final String num1, final String num2) {
-		return operation.doCalculation(num1, num2);
+		return strategy.doCalculation(num1, num2);
 	}
 }

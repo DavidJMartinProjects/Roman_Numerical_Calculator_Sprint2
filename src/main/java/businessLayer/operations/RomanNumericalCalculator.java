@@ -11,9 +11,9 @@
  *----------------------------------------------------------------------------*/
 package businessLayer.operations;
 
-import businessLayer.Converter;
 import businessLayer.api.CalculatorStrategy;
 import domainLayer.CalculationResult;
+import utils.Converter;
 import utils.Validator;
 
 public abstract class RomanNumericalCalculator implements CalculatorStrategy {

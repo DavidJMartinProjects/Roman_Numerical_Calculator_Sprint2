@@ -32,9 +32,8 @@ public class CalculatorWS {
 		return "status : webService online";
 	}
 
-//	@RequestMapping(value = "/addition", method = RequestMethod.GET, produces = { "application/json" })
 	@GetMapping
-	public ResponseEntity<Object> calculate(@RequestParam("num1") final String num1, @RequestParam("num2") final String num2, 
+	public ResponseEntity<Object> performCalculation(@RequestParam("num1") final String num1, @RequestParam("num2") final String num2, 
 			@RequestParam("operationType") final String operationType) {
 		try {			
 			context.setOperation(operationFactory.getOperation(operationType));
@@ -46,8 +45,8 @@ public class CalculatorWS {
 	}
 	
 	@RequestMapping(value = "/operations", method = RequestMethod.GET, produces = { "application/json" })
-	public ResponseEntity<Object> getOperations() {		
-		return new ResponseEntity<>(SupportedOperations.getAvailableOperations(), HttpStatus.OK);
+	public ResponseEntity<Object> getSupportedOperations() {		
+		return new ResponseEntity<>(SupportedOperations.supportedOperationsAsList(), HttpStatus.OK);
 	}	
 
 }

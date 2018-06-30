@@ -9,7 +9,7 @@
  * program(s) have been supplied.
  *******************************************************************************
  *----------------------------------------------------------------------------*/
-package businessLayer;
+package utils;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

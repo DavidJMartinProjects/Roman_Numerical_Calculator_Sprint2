@@ -29,7 +29,7 @@ public enum SupportedOperations {
 		this.symbol = symbol;
 	}
 
-	public static String getAvailableOperations() {
+	public static String supportedOperationsAsList() {
 		String operations = "";
 		final SupportedOperations arr[] = SupportedOperations.values();
 		for(final SupportedOperations op : arr) {

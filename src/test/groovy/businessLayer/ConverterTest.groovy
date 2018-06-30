@@ -17,6 +17,7 @@ import domainLayer.CalculationResult
 import domainLayer.RomanNumerics
 import spock.lang.Specification
 import spock.lang.Unroll
+import utils.Converter
 
 /**
  * @author eaamrvd
