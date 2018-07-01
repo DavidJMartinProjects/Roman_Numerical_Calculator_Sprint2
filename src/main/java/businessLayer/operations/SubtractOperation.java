@@ -15,10 +15,10 @@ import businessLayer.api.CalculatorStrategy;
 import businessLayer.api.RomanNumericalCalculator;
 import domainLayer.CalculationResult;
 
-public class SubtractOperation extends RomanNumericalCalculator implements CalculatorStrategy  { 		
+public class SubtractOperation extends RomanNumericalCalculator { 		
 
 	@Override
-	public boolean validateCalculation(final int numeral1, final int numeral2) {		
+	public boolean preCalculationValidation(final int numeral1, final int numeral2) {		
 		return true;	
 	}
 

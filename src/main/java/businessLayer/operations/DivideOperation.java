@@ -20,10 +20,10 @@ import domainLayer.CalculationResult;
  *
  */	
 
-public class DivideOperation extends RomanNumericalCalculator implements CalculatorStrategy  {
+public class DivideOperation extends RomanNumericalCalculator  {
 
 	@Override
-	public boolean validateCalculation(final int numeral1, final int numeral2) {		
+	public boolean preCalculationValidation(final int numeral1, final int numeral2) {		
 		return true;	
 	}
 

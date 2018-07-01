@@ -18,10 +18,10 @@ import businessLayer.api.RomanNumericalCalculator;
 import domainLayer.CalculationResult;
 
 @Component
-public class AddOperation extends RomanNumericalCalculator implements CalculatorStrategy {
+public class AddOperation extends RomanNumericalCalculator {
 
 	@Override
-	public boolean validateCalculation(final int numeral1, final int numeral2) {		
+	public boolean preCalculationValidation(final int numeral1, final int numeral2) {		
 		return true;	
 	}
 
