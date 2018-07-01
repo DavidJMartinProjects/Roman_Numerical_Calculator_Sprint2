@@ -11,6 +11,17 @@
 		<version>2.0.2.RELEASE</version>
 	</parent>
 
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>target/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>file:///C:/repoRoman_Numerical_Calculator_Sprint2/target</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<properties>
 		<version.groovy>2.4.0</version.groovy>
 		<version.spock>1.1-groovy-2.4</version.spock>
@@ -79,6 +90,12 @@
 			<groupId>org.spockframework</groupId>
 			<artifactId>spock-spring</artifactId>
 			<version>${version.spock}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			<version>3.0.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
@@ -156,6 +173,7 @@
 							<include>**/*Spec.java</include>
 							<include>**/*Test.java</include>
 							<include>**/*Tests.java</include>
+							<include>**/*.feature</include>
 						</includes>
 					</configuration>
 				</plugin>

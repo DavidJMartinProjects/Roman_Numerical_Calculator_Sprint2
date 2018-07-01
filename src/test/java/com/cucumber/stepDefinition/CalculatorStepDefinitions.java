@@ -1,4 +1,4 @@
-package com.cucumber;
+package com.cucumber.stepDefinition;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.web.WebAppConfiguration;
 
@@ -38,7 +39,7 @@ public class CalculatorStepDefinitions {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 	
-	@Given("^I want to write a step with precondition$")
+	@Given("^The browser is on the homepage$")
 	public void whenGiven() throws Throwable {
 		System.out.println("given");
 		driver.get("http://localhost:8080/");
@@ -65,17 +66,9 @@ public class CalculatorStepDefinitions {
 			assertEquals("Result : XIV + LX = LXXIV", driver.findElement(By.id("result")).getText());
 		} catch (Error e) {
 			verificationErrors.append(e.toString());
+		} finally {
+			driver.quit();
 		}
 	}
-	
-	@After
-	public void tearDown() throws Exception {
-		driver.quit();
-		String verificationErrorString = verificationErrors.toString();
-		if (!"".equals(verificationErrorString)) {
-			fail(verificationErrorString);
-		}
-	}
-
 
 }
